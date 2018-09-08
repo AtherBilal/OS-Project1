@@ -1,0 +1,4 @@
+# Operating-Systems Project1
+
+Note: Instead of using `perror` for this particular assignment I decided to use `fprintf()` + `strerr()`
+just because it is much easier to build the string this way
