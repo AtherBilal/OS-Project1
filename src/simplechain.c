@@ -58,7 +58,7 @@ int main (int argc, char *argv[]) {
 
 
  for (i = 1; i < n; i++){
-   if (childpid == fork()){
+   if ( (childpid = fork()) ){
      break;
    }
  }
