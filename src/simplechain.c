@@ -16,9 +16,7 @@ int main (int argc, char *argv[]) {
  static char usageError[] = "%s: Usage: %s [-n # of processes]\n";
 
  // throw error if less than 2 arguments are passed
- if (argc < 2){
-   customErrorCode = 3;
- }
+
 
  // checking for options -h, -n, -p
  while ((option = getopt(argc, argv, "hpn:")) != -1) {
@@ -41,6 +39,10 @@ int main (int argc, char *argv[]) {
       customErrorCode = 3;
       break;
    }
+ }
+ 
+ if (argc != 3){
+   customErrorCode = 3;
  }
 
  switch (customErrorCode) {
