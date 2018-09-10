@@ -37,6 +37,7 @@ int main (int argc, char *argv[]) {
     case('p'):
       // outputting a test error
       customErrorCode = 2;
+      break;
     case ('?'):
       customErrorCode = 3;
       break;

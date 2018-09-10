@@ -35,12 +35,13 @@ int main (int argc, char *argv[]) {
     case('p'):
       // outputting a test error
       customErrorCode = 2;
+      break;
     case ('?'):
       customErrorCode = 3;
       break;
    }
  }
- 
+
  if (argc != 3){
    customErrorCode = 3;
  }
