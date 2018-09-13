@@ -79,6 +79,6 @@ int main (int argc, char *argv[]) {
 	  scanf(" %c", &mybuf[j]);
   }
   mybuf[nchars] = '\0';
- fprintf(stderr, "i:%d process ID:%ld string:%s\n", i, (long)getpid(), mybuf);
+ fprintf(stderr, "i:%d process ID:%ld mybuf string:%s\n", i, (long)getpid(), mybuf);
  return 0;
 }
