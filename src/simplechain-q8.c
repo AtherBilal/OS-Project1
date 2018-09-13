@@ -76,11 +76,9 @@ int main (int argc, char *argv[]) {
  }
 
  for (j = 0; j < nchars; j++) {
-	scanf(" %c", &mybuf[j]);
+	  scanf(" %c", &mybuf[j]);
   }
   mybuf[nchars] = '\0';
-
-
- fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", i, (long)getpid(), (long)getppid(), (long)childpid);
+ fprintf(stderr, "i:%d process ID:%ld string:%s\n", i, (long)getpid(), mybuf);
  return 0;
 }
