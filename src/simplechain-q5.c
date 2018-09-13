@@ -13,7 +13,7 @@ int main (int argc, char *argv[]) {
  int errno;
  int customErrorCode = 0;
  extern char *optarg;
- static char usageError[] = "%s: Usage: %s [-n <# of processes> | -k <number of process prints | -m <seconds to sleep>]\n";
+ static char usageError[] = "%s: Usage: %s [-n <# of processes> | -k <number of process prints> | -m <seconds to sleep>]\n";
 
  // throw error if less than 2 arguments are passed
 
