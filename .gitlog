@@ -1,0 +1,26 @@
+* 4ef3da2 : added ANSWERS file
+* 294d526 : fixed indentation issue
+* e9b7d9e : updated readme file
+* eb6ce6a : seperated make commands for final version and for all versions
+* b3e63dc : fixed output string
+* b90e0ae : added creation of bin directory for output files
+* 3d821d5 : updated print statement
+* ce52005 : fixed commit message
+* 0bae5b9 : added questions 7 and 8
+* eb6280e : added missing break statements
+* b267f81 : updated makefile for question 7 and 8
+* 27d36a3 : added question 6 source code
+* c478ddd : updated makefile for question 6
+* 92bb790 : added question 5 source code
+* 0755acd : updated makefile for question 5
+* 4507d2e : Added sleep statement as directed in question
+* 7b3f869 : updated makefile to support questoin 4
+* f825429 : moved argc check to after getopt
+* 587059f : fixed forking of processes
+* e99ec88 : added option support for -p, -h, and -n
+* c312698 : updated Makefile to work with validation file
+* 2e85f95 : added validation header file to check for numbers
+* f9adfb8 : added note about perror and changed file extension
+* 39a4c28 : copied base file from textbook
+* 7f31add : added basic makefile
+* 9808bc0 : Initial commit
