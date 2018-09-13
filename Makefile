@@ -10,6 +10,10 @@ Q8=src/simplechain-q8.c
 HELPERFILES= src/validation.c
 base: $(BASEFILE) $(HELPERFILES)
 	mkdir -p bin/
+	$(CC) $(CFLAGS) $(Q8) $(HELPERFILES) -o bin/ass1
+	
+all: $(BASEFILE) $(HELPERFILES)
+	mkdir -p bin/
 	$(CC) $(CFLAGS) $(BASEFILE) $(HELPERFILES) -o bin/ass1
 	$(CC) $(CFLAGS) $(Q4) $(HELPERFILES) -o bin/ass1-q4
 	$(CC) $(CFLAGS) $(Q5) $(HELPERFILES) -o bin/ass1-q5
