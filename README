@@ -25,3 +25,5 @@ bin/ass1
 
 This will execute the base file. add a `bin/ass1-q#` to run the version for a
 particular question where # is between [4-8]
+
+To view git log history please run `cat .gitlog`
