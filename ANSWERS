@@ -1,0 +1,49 @@
+1.
+  One thing I noticed which was also mentioned in the book, is that the exact order
+  of processes is not consistent. This is because the processes are picked up by
+  the scheduler to run and the order in which it gets picked up is not consistent.
+
+  Furthermore, the parent ID for some of the child processes defaults to 1, which
+  means that the parent process has died, and a system process 'adopted' the child.
+  process
+
+
+2.
+  [24374] -> [24375] -> [24376] -> [24377]
+
+3. From outputting `/proc/sys/kernel/pid_max` we see that the largest pid_max is
+32768.From running the program repeatedly the lowest PID I've seen is ~300. This
+could be because the first 300 processes are system/existing processes.
+Furthermore, I messed around and ran ~500-1000 processes and found that the more
+processes I ran, the more processes were adopted by init. Which in our case is
+PID = 1.
+
+4. I was able to run the program with the `sleep(10)` command in it for values
+up to 28. For any number larger that 28 the process would time out. This is
+likely because the program took longer to execute than the time allotted by the
+scheduler on the OS.
+
+5. I was able to run up to n = 50 processes (highest value I tried) without the
+program timing out. I noticed that, I was only able to run up to 28 processes.
+As I'm typing this I realized that a 30 process limit per user was enforced over
+the weekend likely because of the server reboot. That explains why.
+
+6. Once again, I am only able to run 28 processes at a time, because of the limit
+put on the server. With the wait command included in this program I noticed that
+none of the parent processes terminate. Which means that no child processes were
+adopted by init.
+
+7. The only difference I notice is that it seems that there is a larger number
+of processes that are being adopted by init. My guess is that this is because
+since we have the each segment of the process line as a separate command there
+is more time for the parent process to complete or terminate. Which means there
+is a higher likelihood of processes being adopted by init.
+
+8. Ok the output for this is looking pretty weird. Assuming my code is correct.
+It seems that when the number of characters specified by -c are entered, then
+the program outputs the the first process (i=1). For the first process we can
+see that in the buffer is the string that is c characters long. In order to
+output the remainder of the processes a new character + return must be pressed
+per process, and we can see only one one char in the buffer.
+A lot of weird things are happening. Other times the buffer has to be c
+characters long.
